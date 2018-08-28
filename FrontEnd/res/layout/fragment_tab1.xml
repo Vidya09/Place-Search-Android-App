@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:text="Keyword"
+        android:id="@+id/key"
+        android:layout_below="@+id/tablayout"
+        android:layout_marginTop="20sp"
+        />
+    <TextView
+        android:id="@+id/keymisserr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/errorcolor"
+        android:visibility="gone"
+        android:layout_below="@+id/key"/>
+    <EditText
+        android:id="@+id/plain_text_input"
+        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:layout_below="@+id/keymisserr"
+        android:hint="Enter Keyword"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/plain_text_input"
+        android:text="Category"
+        android:id="@+id/categorylist"
+        />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/categorylist"
+        android:id="@+id/spinnerclass"
+        >
+    </Spinner>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/categorylist"
+        android:text="Distance(in miles)"
+        android:id="@+id/dist"
+        android:layout_marginTop="40sp"
+        />
+    <EditText
+        android:id="@+id/enterdist"
+        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:layout_below="@+id/dist"
+        android:hint="Enter distance(default 10 miles)"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/enterdist"
+        android:text="From"
+        android:id="@+id/fromval"
+        />
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/fromval"
+        android:id="@+id/rbgrp"
+        >
+        <RadioButton android:id="@+id/hereval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Here" />
+        <RadioButton android:id="@+id/locationval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other.Specify Location"/>
+    </RadioGroup>
+    <TextView
+        android:id="@+id/locmisserr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="390dp"
+        android:textColor="@color/errorcolor"
+        android:visibility="gone"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="5dp"
+        android:hint="Type in the location"/>
+    <requestFocus/>
+
+    <Button
+        android:id="@+id/buttonSearch"
+        android:text="SEARCH"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="346dp"
+        />
+    <Button
+        android:id="@+id/clearbutton"
+        android:text="CLEAR"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/buttonSearch"
+        android:layout_marginTop="346dp"
+        />
+</RelativeLayout>
